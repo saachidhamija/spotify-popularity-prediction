@@ -100,6 +100,37 @@ The notebook includes:
 
 EE 344 Final Project
 
+## TODO (Remaining Pipeline)
+
+### Modeling
+- [ ] Train final Random Forest using best hyperparameters and evaluate on test set (MAE / RMSE / R²)
+- [ ] Add Gradient Boosting model:
+  - [ ] Write "Why Gradient Boosting" markdown cell
+  - [ ] Tune hyperparameters with GroupKFold (small randomized search)
+  - [ ] Evaluate on test set + generate diagnostic plots
+
+### Evaluation + Visualization
+- [ ] Update the master comparison table (Baseline vs Ridge vs RF vs GB): CV RMSE + Test MAE/RMSE/R²
+- [ ] For the best model, include:
+  - [ ] Predicted vs Actual scatter (y=x line)
+  - [ ] Residuals vs Predicted
+  - [ ] Residual histogram
+  - [ ] Feature importance (top 15–20)
+
+### Ablation Study (Feature Contributions)
+- [ ] Run ablation using best model (recommended: Gradient Boosting):
+  - [ ] Audio only (10 scaled audio features)
+  - [ ] Genre only (track_genre_*)
+  - [ ] Audio + Genre
+  - [ ] Full (Audio + Genre + key/time_signature + explicit/mode)
+  - [ ] Full minus Genre
+- [ ] Summarize ablation results in a single table + 3–5 bullet interpretation
+
+### Write-Up / Conclusions
+- [ ] Final conclusions: best model, key metrics, what features mattered most
+- [ ] Limitations: no date column, popularity influenced by external factors, grouped split strictness
+- [ ] Future work: add release date via Spotify API, leakage-safe artist encoding experiment, richer features
+
 ## License
 
 This project is for educational purposes.
